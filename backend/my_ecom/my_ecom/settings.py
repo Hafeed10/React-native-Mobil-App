@@ -24,6 +24,8 @@ INSTALLED_APPS = [
 
     'rest_framework',
 
+     'corsheaders',
+
     'otp',
 
     'Login',
