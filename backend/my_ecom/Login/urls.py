@@ -5,7 +5,6 @@ from Login import views
 from .views import LoginAPI
 
 urlpatterns = [
-    path('', views.getRoutes, name ='getRoutes')
     path('login/', LoginAPI.as_view(), name='login')
 ] 
 

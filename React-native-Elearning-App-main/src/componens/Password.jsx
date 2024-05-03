@@ -1,17 +1,24 @@
+// Password.js
+
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView, Image, TextInput } from 'react-native';
 
-const Password = () => {
+const Password = ({ navigation }) => {
   const [password, setPassword] = useState('');
   const [passwordValid, setPasswordValid] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = () => {
+  const handlePassword = () => {
     console.log("Password submitted!"); 
-    // Handle password submission logic here
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      navigation.navigate('BottomTabNavigator');
+      setPassword(""); // Clear the text input value
+    }, 2000);
   };
 
   const handlePasswordChange = (text) => {
-    // Update the password state
     setPassword(text);
 
     // Check password strength
@@ -39,13 +46,12 @@ const Password = () => {
             value={password}
           />
         </View>
-        {/* Conditional rendering for password strength message */}
         <Text style={[styles.number2, passwordValid ? styles.passwordValid : styles.passwordInvalid]}>
           {passwordValid ? 'Password meets requirements' : 'Password does not meet requirements'}
         </Text>
       </View>
       <TouchableOpacity
-        onPress={handleSubmit}
+        onPress={handlePassword}
         style={styles.Dansection}
       >
         <Text style={styles.phone}>Submit</Text>
