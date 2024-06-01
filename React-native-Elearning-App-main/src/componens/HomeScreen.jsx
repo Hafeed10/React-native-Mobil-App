@@ -37,17 +37,17 @@ function HomeScreen({ navigation }) {
         </View>
         <Text style={styles.sentMessage}>An OTP has been sent to your phone</Text>
       </View>
-      <Tou{/*  */}chableOpacity
+      <TouchableOpacity
         disabled={!otp} // Disable the button if OTP is empty
         onPress={handleVerifyOTP}
         style={[styles.Dansection, !otp && styles.disabledButton]} // Apply styles based on OTP presence
-      > 
-        {isLoading ?(
+      >
+        {isLoading ? (
           <ActivityIndicator color="#ffffff" />
         ) : (
           <Text style={styles.phone}>Join Now</Text>
         )}
-      </Tou>
+      </TouchableOpacity>
       <View style={styles.can}>
         <View style={styles.elo}>
           <Text>Don't have an account?</Text>

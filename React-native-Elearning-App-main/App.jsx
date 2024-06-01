@@ -10,6 +10,10 @@ import Contact from './src/componens/Contact';
 import Hafeex from './src/componens/Hafeex';
 import Todo from './src/componens/Todo';
 import Class from './src/componens/Class';
+// import LecturesScreen from './LecturesScreen';
+// import OngoingScreen from './OngoingScreen';
+// import CompletedScreen from './CompletedScreen';
+
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -44,8 +48,8 @@ const BottomTabNavigator = () => {
               : require('./src/image/Assets/download-removebg-preview.png')
           } else if (route.name === 'Setting') { // Adjusted condition
             iconSource = focused
-            ? require('./src/image/Assets/home-active.png')
-            : require('./src/image/Assets/home-active.png')
+              ? require('./src/image/Assets/home-active.png')
+              : require('./src/image/Assets/home-active.png')
           }
           return <Image source={iconSource} style={styles.img} />;
         },
@@ -53,13 +57,24 @@ const BottomTabNavigator = () => {
         tabBarInactiveTintColor: 'green',
       })}
     >
-      <Tab.Screen name="Home Page" component={Hafeex}  options={{ headerShown: false }} />
-      <Tab.Screen name="Todo" component={Todo}  options={{ headerShown: true }}/>
-      <Tab.Screen name="Setting" component={Class}  options={{ headerShown: true }}/>
+      {/* <Tab.Screen name="Home Page" component={Hafeex} options={{ headerShown: false }} /> */}
+      <Tab.Screen name="Todo" component={Todo} options={{ headerShown: false }} />
+      <Tab.Screen name="Setting" component={Class} options={{ headerShown: true }} />
     </Tab.Navigator>
+
+
   );
 };
-
+const TodoStack = () => {
+  return (
+    <Stack.Navigator initialRouteName="Todo">
+      <Stack.Screen name="Todo" component={Todo} />
+      <Stack.Screen name="Lectures" component={LecturesScreen} />
+      <Stack.Screen name="Ongoing" component={OngoingScreen} />
+      <Stack.Screen name="Completed" component={CompletedScreen} />
+    </Stack.Navigator>
+  );
+};
 export default App;
 
 const styles = StyleSheet.create({
