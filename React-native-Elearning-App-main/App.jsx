@@ -22,10 +22,10 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        {/* <Stack.Screen name="Login-Page" component={HomeScreen} />
-        <Stack.Screen name="Verify OTP" component={AboutScreen} />
+        <Stack.Screen name="Login-Page" component={HomeScreen} />
+        < Stack.Screen name="Verify OTP" component={AboutScreen} />
         <Stack.Screen name="Contact" component={Contact} />
-        <Stack.Screen name="Password" component={Password} /> */}
+        <Stack.Screen name="Password" component={Password} />
         <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
@@ -59,7 +59,7 @@ const BottomTabNavigator = () => {
     >
       <Tab.Screen name="Home Page" component={Hafeex} options={{ headerShown: false }} />
       <Tab.Screen name="Todo" component={Todo} options={{ headerShown: false }} />
-      <Tab.Screen name="Setting" component={Class} options={{ headerShown: true }} />
+      <Tab.Screen name="Setting" component={Class} options={{ headerShown: false }} />
     </Tab.Navigator>
 
 
