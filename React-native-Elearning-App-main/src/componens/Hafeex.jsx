@@ -30,6 +30,7 @@ const Hafeex = ({ navigation }) => {
         <View>
           <Text style={styles.p2}>Choose Your Course</Text>
         </View>
+
         <View style={styles.hafee}>
           <View style={styles.hafe}>
             <View style={styles.middler}>
@@ -49,26 +50,28 @@ const Hafeex = ({ navigation }) => {
               </View>
             </View>
           </View>
+
         </View>
         <View style={styles.hafee}>
-          <View style={styles.hafe2}>
-            <View style={styles.middler}>
-              <Text style={styles.p1}>Photoshop</Text>
-              <View style={styles.max}>
-                <Text style={styles.p0}>03Classes</Text>
-                <Image style={styles.image1} source={require('../image/Assets/derivation.jpg')} />
-              </View>
-            </View>
-          </View>
           <View style={styles.hafe3}>
             <View style={styles.middler}>
-              <Text style={styles.p1}>Business</Text>
+              <Text style={styles.p1}>UI/UX Design</Text>
               <View style={styles.max}>
                 <Text style={styles.p0}>03Classes</Text>
-                <Image style={styles.image1} source={require('../image/Assets/bussiness.jpg')} />
+                <Image style={styles.image1} source={require('../image/Assets/ui-ux.jpg')} />
               </View>
             </View>
           </View>
+          <View style={styles.hafe2}>
+            <View style={styles.middler}>
+              <Text style={styles.p1}>Derivation</Text>
+              <View style={styles.max}>
+                <Text style={styles.p0}>03Classes</Text>
+                <Image style={styles.image1} source={require('../image/Assets/history.jpg')} />
+              </View>
+            </View>
+          </View>
+
         </View>
       </View>
     </SafeAreaView >

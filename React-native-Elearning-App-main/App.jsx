@@ -57,7 +57,7 @@ const BottomTabNavigator = () => {
         tabBarInactiveTintColor: 'green',
       })}
     >
-      {/* <Tab.Screen name="Home Page" component={Hafeex} options={{ headerShown: false }} /> */}
+      <Tab.Screen name="Home Page" component={Hafeex} options={{ headerShown: false }} />
       <Tab.Screen name="Todo" component={Todo} options={{ headerShown: false }} />
       <Tab.Screen name="Setting" component={Class} options={{ headerShown: true }} />
     </Tab.Navigator>
@@ -65,16 +65,16 @@ const BottomTabNavigator = () => {
 
   );
 };
-const TodoStack = () => {
-  return (
-    <Stack.Navigator initialRouteName="Todo">
-      <Stack.Screen name="Todo" component={Todo} />
-      <Stack.Screen name="Lectures" component={LecturesScreen} />
-      <Stack.Screen name="Ongoing" component={OngoingScreen} />
-      <Stack.Screen name="Completed" component={CompletedScreen} />
-    </Stack.Navigator>
-  );
-};
+// const TodoStack = () => {
+//   return (
+//     <Stack.Navigator initialRouteName="Todo">
+//       <Stack.Screen name="Todo" component={Todo} />
+//       <Stack.Screen name="Lectures" component={LecturesScreen} />
+//       <Stack.Screen name="Ongoing" component={OngoingScreen} />
+//       <Stack.Screen name="Completed" component={CompletedScreen} />
+//     </Stack.Navigator>
+//   );
+// };
 export default App;
 
 const styles = StyleSheet.create({
